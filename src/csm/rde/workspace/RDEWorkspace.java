@@ -48,6 +48,7 @@ public class RDEWorkspace extends AppWorkspaceComponent {
 
     public RDEWorkspace(CourseSiteManagerApp app) {
         this.app = app;
+        workspace = contentPane;
         controller = new RDEController(app);
         contentPane.setPadding(new Insets(DEFAULT_PADDING));
         contentPane.setSpacing(DEFAULT_SPACING);

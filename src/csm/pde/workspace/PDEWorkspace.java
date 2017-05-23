@@ -52,6 +52,7 @@ public class PDEWorkspace extends AppWorkspaceComponent {
 
     public PDEWorkspace(AppTemplate app) {
         this.app = app;
+        workspace = contentPane;
 
         PDEController controller = new PDEController((CourseSiteManagerApp) app);
 

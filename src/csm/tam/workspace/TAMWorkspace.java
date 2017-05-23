@@ -73,6 +73,7 @@ public class TAMWorkspace extends AppWorkspaceComponent {
 
     public TAMWorkspace(CourseSiteManagerApp app) {
         this.app = app;
+        workspace = contentPane;
         controller = new TAMController(app, this);
         tasHeaderBox = new HBox();
         tasHeaderLabel = new Label(TAS_HEADER_TEXT);

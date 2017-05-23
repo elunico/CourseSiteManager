@@ -147,7 +147,7 @@ public class SDEData implements AppDataComponent {
     }
 
     public void updateDatePickers() {
-        SDEWorkspace workspace = ((CourseSiteManagerWorkspace) app.getWorkspaceComponent())
+        SDEWorkspace workspace = (SDEWorkspace) ((CourseSiteManagerWorkspace) app.getWorkspaceComponent())
           .getScheduleDataTab()
           .getWorkspace();
         workspace.startingPicker.setValue(LocalDate.of(startYear.get(), startMonth

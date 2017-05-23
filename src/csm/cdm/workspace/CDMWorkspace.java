@@ -62,6 +62,7 @@ public class CDMWorkspace extends AppWorkspaceComponent {
 
         controller = new CDMController(app);
         contentPane = new VBox();
+        workspace  = contentPane;
         contentPane.setSpacing(DEFAULT_SPACING);
         contentPane.setPadding(new Insets(DEFAULT_PADDING));
 
@@ -340,14 +341,12 @@ public class CDMWorkspace extends AppWorkspaceComponent {
         ObservableList<String> boxItems = FXCollections.observableArrayList(
           "CSE", "ISE", "ESE");
         subjectBox.setItems(boxItems);
-//        subjectBox.getSelectionModel().select(0);
     }
 
     public void initNumberBox(ChoiceBox<Integer> numberBox) {
         ObservableList<Integer> boxItems = FXCollections.observableArrayList(
           114, 214, 219, 220, 320, 308, 373);
         numberBox.setItems(boxItems);
-//        numberBox.getSelectionModel().select(2);
     }
 
     public void initYearBox(ChoiceBox<String> yearBox) {
@@ -357,14 +356,12 @@ public class CDMWorkspace extends AppWorkspaceComponent {
             boxItems.add(String.format("20%d", i + 10));
         }
         yearBox.setItems(boxItems);
-//        yearBox.getSelectionModel().select(2);
     }
 
     public void initSemesterBox(ChoiceBox<String> semesterBox) {
         ObservableList<String> boxItems = FXCollections.observableArrayList(
           SEMESTER_FALL, SEMESTER_SUMMER, SEMESTER_SPRING, SEMESTER_WINTER);
         semesterBox.setItems(boxItems);
-//        semesterBox.getSelectionModel().select(SEMESTER_FALL);
     }
 
     private void initListeners() {
@@ -375,10 +372,6 @@ public class CDMWorkspace extends AppWorkspaceComponent {
                            .addListener((observable, oldValue, newValue) -> app.getGUI().getFileController().markAsEdited(app.getGUI()));
         styleSheetChoiceBox.valueProperty().addListener((observable, oldValue, newValue) -> app.getGUI().getFileController().markAsEdited(app.getGUI()));
 
-    }
-
-    public VBox getContent() {
-        return contentPane;
     }
 
     @Override

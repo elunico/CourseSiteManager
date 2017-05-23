@@ -1,0 +1,181 @@
+
+{
+    "subject":"CSE",
+    "number":308,
+    "semester":"Fall",
+    "year":"2018",
+    "title":"Software Engineering",
+    "startHour":9,
+    "endHour":20,
+    "undergrad_tas":[
+        {
+            "name":"Jacob Evans",
+            "email":"jevans@cs.stonybrook.edu",
+            "undergrad":true
+        },
+        {
+            "name":"James Hoffman",
+            "email":"jhoffman@cs.stonybrook.edu",
+            "undergrad":true
+        },
+        {
+            "name":"Michael Matthew",
+            "email":"mmatthew@cs.stonybrook.edu",
+            "undergrad":true
+        },
+        {
+            "name":"Muhammad R Islam",
+            "email":"mri@stonybrook.edu",
+            "undergrad":true
+        }
+    ],
+    "grad_tas":[
+        {
+            "name":"Shilpi Bhattacharyya",
+            "email":"sbhattacharyya@cs.stonybrook.edu",
+            "undergrad":false
+        }
+    ],
+    "officeHours":[
+        {
+            "day":"TUESDAY",
+            "time":"10_00am",
+            "name":"Jacob Evans"
+        },
+        {
+            "day":"THURSDAY",
+            "time":"10_00am",
+            "name":"Jacob Evans"
+        },
+        {
+            "day":"TUESDAY",
+            "time":"10_30am",
+            "name":"Jacob Evans"
+        },
+        {
+            "day":"TUESDAY",
+            "time":"10_30am",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"WEDNESDAY",
+            "time":"10_30am",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"THURSDAY",
+            "time":"10_30am",
+            "name":"Jacob Evans"
+        },
+        {
+            "day":"TUESDAY",
+            "time":"11_00am",
+            "name":"Jacob Evans"
+        },
+        {
+            "day":"TUESDAY",
+            "time":"11_00am",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"WEDNESDAY",
+            "time":"11_00am",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"THURSDAY",
+            "time":"11_00am",
+            "name":"Jacob Evans"
+        },
+        {
+            "day":"TUESDAY",
+            "time":"1_30pm",
+            "name":"Michael Matthew"
+        },
+        {
+            "day":"WEDNESDAY",
+            "time":"1_30pm",
+            "name":"Michael Matthew"
+        },
+        {
+            "day":"THURSDAY",
+            "time":"1_30pm",
+            "name":"Michael Matthew"
+        },
+        {
+            "day":"TUESDAY",
+            "time":"2_00pm",
+            "name":"Michael Matthew"
+        },
+        {
+            "day":"WEDNESDAY",
+            "time":"2_00pm",
+            "name":"Michael Matthew"
+        },
+        {
+            "day":"THURSDAY",
+            "time":"2_00pm",
+            "name":"Michael Matthew"
+        },
+        {
+            "day":"TUESDAY",
+            "time":"2_30pm",
+            "name":"Michael Matthew"
+        },
+        {
+            "day":"TUESDAY",
+            "time":"2_30pm",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"WEDNESDAY",
+            "time":"2_30pm",
+            "name":"Michael Matthew"
+        },
+        {
+            "day":"WEDNESDAY",
+            "time":"2_30pm",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"THURSDAY",
+            "time":"2_30pm",
+            "name":"Michael Matthew"
+        },
+        {
+            "day":"THURSDAY",
+            "time":"2_30pm",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"TUESDAY",
+            "time":"3_00pm",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"WEDNESDAY",
+            "time":"3_00pm",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"THURSDAY",
+            "time":"3_00pm",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"TUESDAY",
+            "time":"3_30pm",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"WEDNESDAY",
+            "time":"3_30pm",
+            "name":"James Hoffman"
+        },
+        {
+            "day":"THURSDAY",
+            "time":"3_30pm",
+            "name":"James Hoffman"
+        }
+    ]
+}

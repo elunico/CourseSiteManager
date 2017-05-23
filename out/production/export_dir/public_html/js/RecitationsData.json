@@ -1,0 +1,24 @@
+
+{
+    "subject":"CSE",
+    "number":308,
+    "semester":"Fall",
+    "year":"2018",
+    "title":"Software Engineering",
+    "recitations":[
+        {
+            "section":"R01(Richard McKenna)",
+            "day_time":"Wednesdays, 3:30pm-4:23pm",
+            "location":"Old CS 2114",
+            "ta_1":"James Hoffman",
+            "ta_2":"Michael Matthew"
+        },
+        {
+            "section":"R02(Ritwick Banerjee)",
+            "day_time":"Mondays, 11:00am-11:53am",
+            "location":"Old CS 2116",
+            "ta_1":"Jacob Evans",
+            "ta_2":"Muhammad R Islam"
+        }
+    ]
+}

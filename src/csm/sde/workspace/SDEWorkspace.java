@@ -57,6 +57,7 @@ public class SDEWorkspace extends AppWorkspaceComponent {
         SDEController controller = new SDEController(app);
 
         contentPane = new VBox();
+        workspace = contentPane;
         contentPane.setSpacing(DEFAULT_SPACING);
         contentPane.setPadding(new Insets(DEFAULT_PADDING));
 
@@ -220,8 +221,7 @@ public class SDEWorkspace extends AppWorkspaceComponent {
         Label secondTitle = new Label(SDE_SECOND_TITLE);
         Button minusButtonBottom = CourseSiteManagerWorkspace.makeMinusButton();
 
-        minusButtonBottom.setOnAction(e ->
-          controller.handleDeleteAction(e));
+        minusButtonBottom.setOnAction(controller::handleDeleteAction);
 
         HBox secondBox = new HBox(secondTitle, minusButtonBottom);
         secondBox.setSpacing(DEFAULT_SPACING);

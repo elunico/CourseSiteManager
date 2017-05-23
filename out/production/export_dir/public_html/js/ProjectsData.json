@@ -1,0 +1,39 @@
+
+{
+    "subject":"CSE",
+    "number":308,
+    "semester":"Fall",
+    "year":"2018",
+    "title":"Software Engineering",
+    "work":[
+        {
+            "semester":"Fall 2018",
+            "projects":[
+                {
+                    "name":"C4 Comics",
+                    "link":"google.com",
+                    "students":[
+                        "Ryan Johnson",
+                        "Dylan Johnson"
+                    ]
+                },
+                {
+                    "name":"Comic Sans",
+                    "link":"google.com",
+                    "students":[
+                        "Arturo Snell",
+                        "Arielle Smith"
+                    ]
+                },
+                {
+                    "name":"Instant Doodles",
+                    "link":"google.com",
+                    "students":[
+                        "Marianne Thornberry",
+                        "Mandy Cole"
+                    ]
+                }
+            ]
+        }
+    ]
+}
