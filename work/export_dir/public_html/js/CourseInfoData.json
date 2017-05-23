@@ -1,0 +1,16 @@
+
+{
+    "subject":"CSE",
+    "title":"Software Engineering",
+    "number":308,
+    "semester":"Fall",
+    "year":"2018",
+    "instructor_name":"Richard McKenna",
+    "instructor_home":"http://www3.cs.stonybrook.edu/~richard/",
+    "export_dir":"/Users/thomaspovinelli/NetBeansProjects/Homework6/work/export_dir/public_html",
+    "site_template_dir":"/Users/thomaspovinelli/NetBeansProjects/Homework6/work/templates/CSE308",
+    "banner_image":"file:/Users/thomaspovinelli/NetBeansProjects/Homework6/work/templates/CSE308/images/SBUDarkRedShieldLogo.png",
+    "left_image":"file:/Users/thomaspovinelli/NetBeansProjects/Homework6/work/templates/CSE308/images/CSLogo.png",
+    "right_image":"file:/Users/thomaspovinelli/NetBeansProjects/Homework6/work/templates/CSE308/images/SBUWhiteShieldLogo.jpg",
+    "stylesheet":"sea_wolf.css"
+}

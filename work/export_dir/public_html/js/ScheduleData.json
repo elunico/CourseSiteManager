@@ -1,0 +1,69 @@
+
+{
+    "startingMondayMonth":1,
+    "startingMondayDay":30,
+    "startingMondayYear":2017,
+    "endingFridayMonth":5,
+    "endingFridayYear":2017,
+    "endingFridayDay":12,
+    "subject":"CSE",
+    "number":308,
+    "semester":"Fall",
+    "year":"2018",
+    "title":"Software Engineering",
+    "holidays":[
+    ],
+    "lectures":[
+        {
+            "month":5,
+            "day":1,
+            "title":"Design Patterns",
+            "link":"Creational Design Patterns",
+            "topic":"Creational Design Patterns",
+            "criteria":"none",
+            "time":"3:00pm-4:20pm"
+        },
+        {
+            "month":5,
+            "day":5,
+            "title":"More Design Patterns",
+            "link":"Other types of design patterns",
+            "topic":"Other types of design patterns",
+            "criteria":"s",
+            "time":"3:00pm-4:20pm"
+        },
+        {
+            "month":5,
+            "day":10,
+            "title":"Final Exam",
+            "link":"Final Exam",
+            "topic":"Final Exam",
+            "criteria":"asd",
+            "time":"2:15pm-5:00pm"
+        }
+    ],
+    "references":[
+    ],
+    "recitations":[
+        {
+            "month":5,
+            "day":3,
+            "title":"Multithreading",
+            "link":"Threads and Tasks in Java",
+            "topic":"Threads and Tasks in Java",
+            "criteria":"none",
+            "time":"3:30pm-4:23pm"
+        }
+    ],
+    "hws":[
+        {
+            "month":5,
+            "day":8,
+            "title":"Homework 6 Due",
+            "link":"Homework 6 due",
+            "topic":"Homework 6 due",
+            "criteria":"a",
+            "time":"12:00am-12:01am"
+        }
+    ]
+}

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    This XML file allows us to easily customize the look and language used
+    in our program's user interface. Note that this properties file is only
+    for the standard controls for an app from the Desktop Java Framework, so
+    it would not include things initialized for the workspace, which is
+    customizable.
+-->
+<properties>
+    <property_list>
+        <property name="APP_TITLE"
+                  value="Generador de Sitios del Curso"></property>
+        <property name="CDM_COURSE_INFO_LABEL"
+                  value="Información del Curso"></property>
+        <property name="APP_LOGO" value="TAManagerLogo.png"></property>
+        <property name="APP_PATH_CSS" value="tam/style/"></property>
+        <property name="APP_CSS" value="tam_style.css"></property>
+        <property name="NEW_ICON" value="New.png"></property>
+        <property name="LOAD_ICON" value="Load.png"></property>
+        <property name="SAVE_ICON" value="Save.png"></property>
+        <property name="SAVE_AS_ICON" value="SaveAs.png"></property>
+        <property name="EXPORT_ICON" value="Export.png"></property>
+        <property name="EXIT_ICON" value="Exit.png"></property>
+        <property name="UNDO_ICON" value="Undo.png"></property>
+        <property name="REDO_ICON" value="Redo.png"></property>
+        <property name="ABOUT_ICON" value="About.png"></property>
+        <property name="ABOUT_TOOLTIP"
+                  value="Información de la aplicación"></property>
+        <property name="NEW_TOOLTIP"
+                  value="Construir una nueva cuadrícula TA"></property>
+        <property name="LOAD_TOOLTIP"
+                  value="Cargar una cuadrícula TA existente"></property>
+        <property name="SAVE_TOOLTIP"
+                  value="Guardar la actual cuadrícula TA"></property>
+        <property name="SAVE_AS_TOOLTIP"
+                  value="Guardar la cuadrícula TA actual con un nuevo nombre"></property>
+        <property name="EXPORT_TOOLTIP"
+                  value="Crear una página web en un directorio utilizando la cuadrícula TA actual"></property>
+        <property name="EXIT_TOOLTIP" value="Salir de la aplicación"></property>
+        <property name="UNDO_TOOLTIP"
+                  value="Deshacer la acción anterior"></property>
+        <property name="REDO_TOOLTIP"
+                  value="Rehacer la acción previamente deshecha"></property>
+        <property name="CLOSE_BUTTON_TEXT" value="Cerca"></property>
+        <property name="NEW_ERROR_MESSAGE"
+                  value="Se ha producido un error al crear Nuevo trabajo."></property>
+        <property name="NEW_ERROR_TITLE"
+                  value="Nuevo error de trabajo"></property>
+        <property name="LOAD_ERROR_MESSAGE"
+                  value="Se ha producido un error al cargar el trabajo."></property>
+        <property name="LOAD_ERROR_TITLE"
+                  value="Cargar error de trabajo"></property>
+        <property name="SAVE_ERROR_MESSAGE"
+                  value="Se ha producido un error al guardar el trabajo."></property>
+        <property name="SAVE_ERROR_TITLE"
+                  value="Guardar error de trabajo"></property>
+        <property name="PROPERTIES_LOAD_ERROR_MESSAGE"
+                  value="Se ha producido un error al cargar un archivo de propiedades."></property>
+        <property name="PROPERTIES_LOAD_ERROR_TITLE"
+                  value="Error de carga de archivo de propiedades"></property>
+        <property name="NEW_COMPLETED_MESSAGE"
+                  value="Nuevo trabajo preparado para su edición"></property>
+        <property name="NEW_COMPLETED_TITLE"
+                  value="Nuevo trabajo creado"></property>
+        <property name="LOAD_COMPLETED_MESSAGE"
+                  value="Carga del archivo Completado y listo para su edición"></property>
+        <property name="LOAD_COMPLETED_TITLE"
+                  value="Carga completada"></property>
+        <property name="SAVE_COMPLETED_MESSAGE"
+                  value="Archivo guardado completado"></property>
+        <property name="SAVE_COMPLETED_TITLE"
+                  value="Guardado completado"></property>
+        <property name="SAVE_UNSAVED_WORK_MESSAGE"
+                  value="¿Desea guardar primero su trabajo no guardado?"></property>
+        <property name="SAVE_UNSAVED_WORK_TITLE"
+                  value="¿Guardar el trabajo no guardado?"></property>
+        <property name="NEW_CREATED_MESSAGE"
+                  value="Nuevo trabajo creado pero aún no guardado"></property>
+        <property name="WORK_LOADED_MESSAGE"
+                  value="El trabajo ha sido cargado"></property>
+        <property name="WORK_SAVED_MESSAGE"
+                  value="El trabajo ha sido guardado"></property>
+        <property name="SAVE_WORK_TITLE" value="Guarda tu trabajo"></property>
+        <property name="LOAD_WORK_TITLE"
+                  value="Seleccionar archivo de trabajo para cargar"></property>
+        <property name="WORK_FILE_EXT" value="json"></property>
+        <property name="WORK_FILE_EXT_DESC"
+                  value="Horario de oficina TA"></property>
+        <property name="TAS_HEADER_TEXT"
+                  value="Asistentes de Enseñanza"></property>
+        <property name="NAME_COLUMN_TEXT" value="Nombre"></property>
+        <property name="EMAIL_COLUMN_TEXT" value="Email"></property>
+        <property name="NAME_PROMPT_TEXT" value="Nombre"></property>
+        <property name="EMAIL_PROMPT_TEXT" value="Email"></property>
+        <property name="ADD_BUTTON_TEXT" value="Añadir TA"></property>
+        <property name="OFFICE_HOURS_SUBHEADER"
+                  value="Horario de oficina"></property>
+        <property name="START_LABEL_TEXT" value="Comienzo:"></property>
+        <property name="END_LABEL_TEXT" value="Fin:"></property>
+        <property name="EXPORT_FILES_DIRECTORY" value="Export_files"></property>
+        <property name="CDM_SUBJECT_LABEL" value="Tema:"></property>
+        <property name="CDM_NUMBER_LABEL" value="Número:"></property>
+        <property name="CDM_SEMESTER_LABEL" value="Semestre:"></property>
+        <property name="CDM_YEAR_LABEL" value="Año:"></property>
+        <property name="CDM_TITLE_LABEL" value="Título:"></property>
+        <property name="CDM_INSTRUCTOR_NAME_LABEL"
+                  value="Nombre del Instructor:"></property>
+        <property name="CDM_INSTRUCTOR_HOME_LABEL"
+                  value="Instructor Inicio:"></property>
+        <property name="CDM_EXPORT_DIR_LABEL"
+                  value="Dirección de exportación:"></property>
+        <property name="CDM_EXPORT_PLACE_DEFAULT_LABEL"
+                  value="ninguna"></property>
+        <property name="CDM_CHANGE_BUTTON" value="Cambio"></property>
+        <property name="CDM_SECOND_TITLE_LABEL"
+                  value="Plantilla de sitio"></property>
+        <property name="CDM_INFORMATION_LABEL"
+                  value="El directorio seleccionado debe contener la plantilla completa del sitio, incluidos los archivos HTML"></property>
+        <property name="CDM_SITE_TEMPLATE_LABEL" value="ninguna"></property>
+        <property name="CDM_SELECT_SITE_TEMPLATE_BUTTON"
+                  value="Seleccionar"></property>
+        <property name="CDM_SITE_PAGES_TITLE_LABEL"
+                  value="Páginas del sitio"></property>
+        <property name="CDM_THIRD_TITLE_LABEL"
+                  value="Estilo de página"></property>
+        <property name="CDM_SCHOOL_IMAGE_LABEL"
+                  value="Banner School Imagen:"></property>
+        <property name="CDM_LEFT_FOOTER_IMAGE_LABEL"
+                  value="Imagen de pie de página izquierda:"></property>
+        <property name="CDM_RIGHT_FOOTER_IMAGE_LABEL"
+                  value="Imagen de pie de página derecha:"></property>
+        <property name="CDM_STYLE_SHEET_LABEL"
+                  value="Hoja de estilo:"></property>
+        <property name="CDM_NOTICE_LABEL"
+                  value="NOTA: las nuevas hojas de estilo se pueden colocar en el work/css/ para seleccionar"></property>
+        <property name="RDE_TITLE_LABEL" value="Recitaciones"></property>
+        <property name="RDE_SECTION_LABEL" value="Sección:"></property>
+        <property name="RDE_INSTRUCTOR_LABEL" value="Instructor:"></property>
+        <property name="RDE_DAY_TIME_LABEL" value="Día&#47;Tiempo:"></property>
+        <property name="RDE_LOCATION_LABEL" value="Ubicación:"></property>
+        <property name="RDE_SUPERVISING_TA_LABEL"
+                  value="Supervisión de TA:"></property>
+        <property name="RDE_ADD_UPDATE_BUTTON"
+                  value="Añadir&#47;Actualización"></property>
+        <property name="RDE_CLEAR_BUTTON" value="Claro"></property>
+        <property name="RDE_ADD_EDIT_TITLE"
+                  value="Añadir&#47;Editar"></property>
+        <property name="SDE_FIRST_TITLE"
+                  value="Límites del calendario"></property>
+        <property name="SDE_STARTING_MONDAY_LABEL"
+                  value="Empezando el lunes"></property>
+        <property name="SDE_ENDING_FRIDAY_LABEL"
+                  value="Finalizando el viernes"></property>
+        <property name="SDE_TYPE_LABEL" value="Tipo:"></property>
+        <property name="SDE_DATE_LABEL" value="Fecha:"></property>
+        <property name="SDE_TIME_LABEL" value="Hora:"></property>
+        <property name="SDE_TITLE_LABEL" value="Título:"></property>
+        <property name="SDE_TOPIC_LABEL" value="Tema:"></property>
+        <property name="SDE_LINK_LABEL" value="Enlazar:"></property>
+        <property name="SDE_CRITERIA_LABEL" value="Criterios:"></property>
+        <property name="SDE_SECOND_TITLE" value="Itinerarios"></property>
+        <property name="SDE_ADD_EDIT_BUTTON"
+                  value="Añadir&#47;Editar"></property>
+        <property name="SDE_CLEAR_BUTTON" value="Claro"></property>
+        <property name="PDE_TITLE_LABEL" value="Equipos"></property>
+        <property name="PDE_ADD_EDIT_BUTTON"
+                  value="Añadir&#47;Actualización"></property>
+        <property name="PDE_CLEAR_BUTTON" value="Claro"></property>
+        <property name="PDE_NAME_LABEL" value="Nombre:"></property>
+        <property name="PDE_COLOR_LABEL" value="Color:"></property>
+        <property name="PDE_TEXT_COLOR_LABEL"
+                  value="Color de texto:"></property>
+        <property name="PDE_LINK_LABEL" value="Enlazar:"></property>
+        <property name="PDE_ADD_EDIT_TITLE"
+                  value="Añadir&#47;Editar"></property>
+        <property name="PDE_SECOND_TITLE" value="Estudiantes"></property>
+        <property name="PDE_FIRST_NAME_LABEL"
+                  value="Nombre de pila:"></property>
+        <property name="PDE_LAST_NAME_LABEL" value="Apellido:"></property>
+        <property name="PDE_TEAM_LABEL" value="Equipo:"></property>
+        <property name="PDE_ROLE_LABEL" value="Papel:"></property>
+        <property name="MISSING_TA_NAME_TITLE"
+                  value="Falta el nombre de TA"></property>
+        <property name="MISSING_TA_NAME_MESSAGE"
+                  value="Debe proporcionar un nombre de TA"></property>
+        <property name="MISSING_TA_EMAIL_TITLE"
+                  value="Falta el correo electrónico de TA"></property>
+        <property name="MISSING_TA_EMAIL_MESSAGE"
+                  value="Debe proporcionar un correo electrónico de TA"></property>
+        <property name="TA_NAME_AND_EMAIL_NOT_UNIQUE_TITLE"
+                  value="Nombre y correo electrónico de TA no son únicos"></property>
+        <property name="TA_NAME_AND_EMAIL_NOT_UNIQUE_MESSAGE"
+                  value="Debe proporcionar un nombre y correo electrónico exclusivo de TA"></property>
+        <property name="TA_GRID_INVALID_START_END_TIME_TITLE"
+                  value="Selección de hora no válida para la cuadrícula"></property>
+        <property name="TA_GRID_INVALID_START_END_TIME_MESSAGE"
+                  value="Debe elegir una hora de inicio antes de la hora de finalización elegida en la cuadrícula de horas de oficina"></property>
+        <property name="TAB_NAME_CDM" value="Detalles Del Curso"></property>
+        <property name="TAB_NAME_TAM" value="Datos TA"></property>
+        <property name="TAB_NAME_RDE" value="Datos De La Recitación"></property>
+        <property name="TAB_NAME_SDE" value="Datos Del Horario"></property>
+        <property name="TAB_NAME_PDE" value="Datos Del Proyecto"></property>
+        <property name="UNDERGRAD_COLUMN_TEXT"
+                  value="de licenciatura?"></property>
+
+        <property name="CDM_TITLE_COLUMN"
+                  value="Titilo de Navigación "></property>
+        <property name="CDM_USE_COLUMN" value="En Usa?"></property>
+        <property name="CDM_NAME_COLUMN" value="Nombre"></property>
+        <property name="CDM_SCRIPT_COLUMN"
+                  value="Nombre de Escitura"></property>
+        <property name="RDE_SECTION_HEADER" value="Seccion"></property>
+        <property name="RDE_INSTRUCTOR_HEADER" value="Instructor"></property>
+        <property name="RDE_DAY_TIME_HEADER"
+                  value="Fecha&#47;Tiempo"></property>
+        <property name="RDE_LOCATION_HEADER" value="Lugar"></property>
+        <property name="RDE_TA_HEADER" value="AT"></property>
+
+        <property name="SDE_TYPE_HEADER" value="Tipo"></property>
+        <property name="SDE_DATE_HEADER" value="Fecha"></property>
+        <property name="SDE_TITLE_HEADER" value="Titulo"></property>
+        <property name="SDE_TOPIC_HEADER" value="Tópico"></property>
+
+        <property name="PDE_NAME_HEADER" value="Nombre"></property>
+        <property name="PDE_COLOR_HEADER" value="Color"></property>
+        <property name="PDE_TEXT_COLOR_HEADER"
+                  value="Color de texto"></property>
+        <property name="PDE_LINK_HEADER" value="enlazar"></property>
+
+        <property name="PDE_FIRST_NAME_HEADER" value="Nombre"></property>
+        <property name="PDE_LAST_NAME_HEADER" value="Apellido"></property>
+        <property name="PDE_TEAM_HEADER" value="Equipo"></property>
+        <property name="PDE_ROLE_HEADER" value="Oficio"></property>
+
+
+        <property name="SEMESTER_FALL" value="Otoño"></property>
+        <property name="SEMESTER_WINTER" value="Invierno"></property>
+        <property name="SEMESTER_SUMMER" value="Primavera"></property>
+        <property name="SEMESTER_SPRING" value="Verano"></property>
+
+        <property name="YES" value="Sí"></property>
+        <property name="NO" value="No"></property>
+        <property name="CANCEL" value="Cáncel"></property>
+
+        <property name="PDE_MAIN_TITLE" value="Proyectos"></property>
+        <property name="SDE_MAIN_TITLE" value="Horario"></property>
+
+        <property name="APP_DELETE_PROMPT_TITLE" value="¿Borrar?"></property>
+        <property name="APP_DELETE_PROMPT_MSG" value="¿Está seguro de que desea eliminar este elemento?"></property>
+
+        <property name="TA_CUT_TA" value="¿Estás seguro?"></property>
+        <property name="TA_CUT_TA_MSG" value="Has seleccionado tiempos que eliminarán algunos TA en la cuadrícula ¿estás seguro de que quieres continuar?"></property>
+
+        <property name="SDE_INVALID_DATE_TITLE"
+                  value="Fecha invalida"></property>
+        <property name="SDE_INVALID_DATE_MSG"
+                  value="La fecha no es válida, por favor, no seleccione un fin de semana"></property>
+        <property name="SDE_INVALID_TIME_TITLE"
+                  value="Tiempo no válido"></property>
+        <property name="SDE_INVALID_TIME_MSG"
+                  value="El tiempo no es válido, asegúrese de usar el formato Dias, HH:mmpm-HH:mmpmuno"></property>
+        <property name="SDE_INVALID_LINK_TITLE"
+                  value="Enlace no válido"></property>
+        <property name="SDE_INVALID_LINK_MSG"
+                  value="Ingrese una URL válida para el campo de enlace"></property>
+        <property name="SDE_MONDAY_AFTER_FRIDAY_TITLE" value="Error de coincidencia de fechas"></property>
+        <property name="SDE_MONDAY_AFTER_FRIDAY_MSG" value="El final viernes debe venir después del lunes de inicio"></property>
+
+        <property name="SDE_NOT_FRI_TITLE"
+                  value="El fin del día debe ser el viernes"></property>
+        <property name="SDE_NOT_FRI_MSG"
+                  value="El último día del horario debe ser un viernes"></property>
+        <property name="SDE_NOT_MON_TITLE"
+                  value="El día de inicio debe ser el lunes"></property>
+        <property name="SDE_NOT_MON_MSG"
+                  value="El primer día del horario debe ser un lunes"></property>
+
+        <property name="TAM_CHANGE_BUTTON" value="Cambia"></property>
+
+        <property name="EXPORT_COMPLETE_MSG"
+                  value="se ha completado el exportacion"></property>
+        <property name="EXPORT_COMPLETE_TITLE" value="Exportada!"></property>
+
+        <property name="SITE_TEMPLATE_MISSING_ALERT"
+                  value="Elija un directorio del templo del sitio"></property>
+        <property name="SITE_TEMPLATE_MISSING_MSG"
+                  value="Por favor elija un directorio del templo del sitio antes de exportar."></property>
+
+        <property name="ABOUT_TITLE" value="Cerca"></property>
+        <property name="ABOUT_MESSAGE"
+                  value="Esta aplicación es para diseñar y generar sitios web de cursos para las clases universitarias. Aquí puede especificar detalles del curso, recitaciones, horarios, proyectos, equipos, TAs, horas de oficina, así como personalizar secuencias de comandos, páginas web, colores, imágenes, etc Utilice guardar para recoger donde lo dejó y exportar a colocar el pleno funcionamiento En el directorio deseado."></property>
+
+
+        <property name="PDE_EMPTY_TEAM_DATA_TITLE"
+                  value="Le Falta Data!"></property>
+        <property name="PDE_EMPTY_TEAM_DATA_MSG"
+                  value="Por favor done todos los partes para esta cosa antes de añadarla "></property>
+
+    </property_list>
+    <property_options_list>
+        <property_options name="OFFICE_HOURS_TABLE_HEADERS">
+            <option>Empieza</option>
+            <option>Termina</option>
+        </property_options>
+        <property_options name="DAYS_OF_WEEK">
+            <option>LUNES</option>
+            <option>MARTES</option>
+            <option>MIERCOLES</option>
+            <option>JUEVES</option>
+            <option>VIERNES</option>
+        </property_options>
+    </property_options_list>
+</properties>
