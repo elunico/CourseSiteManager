@@ -1,5 +1,7 @@
 package csm;
 
+import csm.exceptions.InvalidDateException;
+
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -17,14 +19,26 @@ import static java.lang.Integer.parseInt;
  */
 public class DateHybrid {
 
-    public static final DateHybrid WEEKEND = new DateHybrid(4, 30, 2017);
+    public static final DateHybrid WEEKEND;
+    private static final String INVALID_DATE_EXCEPTION = "Date components Date: %d, Month: %d, Year: %d, Hour: %d, Minute: %d, Second: %d are not valid";
+
+    static {
+        DateHybrid WEEKEND1;
+        try {
+            WEEKEND1 = new DateHybrid(4, 30, 2017);
+        } catch (InvalidDateException e) {
+            // squelch
+            WEEKEND1 = null;
+        }
+        WEEKEND = WEEKEND1;
+    }
+
     private Date date;
     private LocalDate localDate;
     private LocalDateTime localDateTime;
     private int day, month, year, hour, minute, second;
 
     private long epochMillis;
-
 
 
     public DateHybrid(LocalDate date) {
@@ -68,11 +82,20 @@ public class DateHybrid {
 
     }
 
-    public DateHybrid(int date, int month, int year) {
+    public DateHybrid(int date, int month, int year)
+      throws InvalidDateException
+    {
         this(date, month, year, 0, 0, 0);
     }
 
-    public DateHybrid(int date, int month, int year, int hour, int minute, int second) {
+    public DateHybrid(int date, int month, int year, int hour, int minute, int second)
+      throws InvalidDateException
+    {
+        if (invalidDate(date, month, year) || month > 12 | month < 1) {
+            throw new InvalidDateException(String.format(INVALID_DATE_EXCEPTION,
+              date, month, year, hour, minute, second));
+        }
+
         this.day = date;
         this.month = month;
         this.year = year;
@@ -94,8 +117,47 @@ public class DateHybrid {
         initDate();
     }
 
-    public static DateHybrid parse(String yyyy_mm_dd) {
-        String[] comps = yyyy_mm_dd.split("-");
+    private boolean invalidDate(int date, int month, int year) {
+        if (date < 1) {
+            return true;
+        }
+        if (date > 31) {
+            return true;
+        }
+        if (date == 31) {
+            switch (month) {
+                case 2:
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    return true;
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    return false;
+                default:
+                    return true;
+            }
+        }
+        if (month == 2) {
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                return date > 29;
+            } else {
+                return date > 28;
+            }
+        }
+        return false;
+    }
+
+    public static DateHybrid parse(String yyyy_mm_dd)
+      throws InvalidDateException
+    {
+        String[] comps = yyyy_mm_dd.split("[_-]");
         // LocalDate String is used to save and it has format YYYY-MM-dd as a string
         return new DateHybrid(parseInt(comps[2]), parseInt(comps[1]), parseInt(comps[0]));
     }
@@ -105,7 +167,6 @@ public class DateHybrid {
         cal.clear();
         cal.setTimeInMillis(epochMillis);
         int val = cal.get(GregorianCalendar.DAY_OF_WEEK);
-        System.out.println(val);
         return val == 1 || val == 7;
     }
 

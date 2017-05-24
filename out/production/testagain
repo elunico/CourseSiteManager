@@ -1,0 +1,326 @@
+
+{
+    "TAM":{
+        "startHour":9,
+        "endHour":20,
+        "TAS":[
+            {
+                "name":"Jacob Evans",
+                "email":"jevans@cs.stonybrook.edu",
+                "undergrad":true
+            },
+            {
+                "name":"James Hoffman",
+                "email":"jhoffman@cs.stonybrook.edu",
+                "undergrad":false
+            },
+            {
+                "name":"Michael Matthew",
+                "email":"mmatthew@cs.stonybrook.edu",
+                "undergrad":true
+            },
+            {
+                "name":"Muhammad R Islam",
+                "email":"mri@stonybrook.edu",
+                "undergrad":true
+            },
+            {
+                "name":"Shilpi Bhattacharyya",
+                "email":"sbhattacharyya@cs.stonybrook.edu",
+                "undergrad":false
+            }
+        ],
+        "officeHours":[
+            {
+                "day":"TUESDAY",
+                "time":"10_00am",
+                "name":"Jacob Evans"
+            },
+            {
+                "day":"THURSDAY",
+                "time":"10_00am",
+                "name":"Jacob Evans"
+            },
+            {
+                "day":"TUESDAY",
+                "time":"10_30am",
+                "name":"Jacob Evans"
+            },
+            {
+                "day":"TUESDAY",
+                "time":"10_30am",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"WEDNESDAY",
+                "time":"10_30am",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"THURSDAY",
+                "time":"10_30am",
+                "name":"Jacob Evans"
+            },
+            {
+                "day":"TUESDAY",
+                "time":"11_00am",
+                "name":"Jacob Evans"
+            },
+            {
+                "day":"TUESDAY",
+                "time":"11_00am",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"WEDNESDAY",
+                "time":"11_00am",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"THURSDAY",
+                "time":"11_00am",
+                "name":"Jacob Evans"
+            },
+            {
+                "day":"TUESDAY",
+                "time":"1_30pm",
+                "name":"Michael Matthew"
+            },
+            {
+                "day":"WEDNESDAY",
+                "time":"1_30pm",
+                "name":"Michael Matthew"
+            },
+            {
+                "day":"THURSDAY",
+                "time":"1_30pm",
+                "name":"Michael Matthew"
+            },
+            {
+                "day":"TUESDAY",
+                "time":"2_00pm",
+                "name":"Michael Matthew"
+            },
+            {
+                "day":"WEDNESDAY",
+                "time":"2_00pm",
+                "name":"Michael Matthew"
+            },
+            {
+                "day":"THURSDAY",
+                "time":"2_00pm",
+                "name":"Michael Matthew"
+            },
+            {
+                "day":"TUESDAY",
+                "time":"2_30pm",
+                "name":"Michael Matthew"
+            },
+            {
+                "day":"TUESDAY",
+                "time":"2_30pm",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"WEDNESDAY",
+                "time":"2_30pm",
+                "name":"Michael Matthew"
+            },
+            {
+                "day":"WEDNESDAY",
+                "time":"2_30pm",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"THURSDAY",
+                "time":"2_30pm",
+                "name":"Michael Matthew"
+            },
+            {
+                "day":"THURSDAY",
+                "time":"2_30pm",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"TUESDAY",
+                "time":"3_00pm",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"WEDNESDAY",
+                "time":"3_00pm",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"THURSDAY",
+                "time":"3_00pm",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"TUESDAY",
+                "time":"3_30pm",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"WEDNESDAY",
+                "time":"3_30pm",
+                "name":"James Hoffman"
+            },
+            {
+                "day":"THURSDAY",
+                "time":"3_30pm",
+                "name":"James Hoffman"
+            }
+        ]
+    },
+    "RDE":{
+        "recitations":[
+            {
+                "section":"R01",
+                "instructor":"Richard McKenna",
+                "day_time":"Wednesdays, 3:30pm-4:23pm",
+                "location":"Old CS 2114",
+                "ta_1":"James Hoffman",
+                "ta_2":"Michael Matthew"
+            },
+            {
+                "section":"R02",
+                "instructor":"Ritwick Banerjee",
+                "day_time":"Mondays, 11:00am-11:53am",
+                "location":"Old CS 2116",
+                "ta_1":"Jacob Evans",
+                "ta_2":"Muhammad R Islam"
+            }
+        ]
+    },
+    "CDM":{
+        "subject":"ESE",
+        "title":"Software Engineering",
+        "number":308,
+        "semester":"Fall",
+        "year":"2018",
+        "instructor_name":"Richard McKenna",
+        "instructor_home":"http://www3.cs.stonybrook.edu/~richard/",
+        "export_dir":"/Users/thomaspovinelli/NetBeansProjects/Homework6/work/export_dir/public_html",
+        "site_template_dir":"/Users/thomaspovinelli/NetBeansProjects/Homework6/work/templates/CSE308",
+        "banner_image":"file:/Users/thomaspovinelli/NetBeansProjects/Homework6/work/templates/CSE308/images/SBUDarkRedShieldLogo.png",
+        "left_image":"file:/Users/thomaspovinelli/NetBeansProjects/Homework6/work/templates/CSE308/images/CSLogo.png",
+        "right_image":"file:/Users/thomaspovinelli/NetBeansProjects/Homework6/work/templates/CSE308/images/SBUWhiteShieldLogo.jpg",
+        "stylesheet":"sea_wolf.css"
+    },
+    "SDE":{
+        "start_month":1,
+        "start_day":30,
+        "start_year":2017,
+        "end_month":5,
+        "end_day":12,
+        "end_year":2017,
+        "schedule_items":[
+            {
+                "type":"Lecture",
+                "date":"2017-05-01",
+                "title":"Design Patterns",
+                "topic":"Creational Design Patterns",
+                "link":"Creational Design Patterns",
+                "criteria":"none",
+                "time":"3:00pm-4:20pm"
+            },
+            {
+                "type":"Lecture",
+                "date":"2017-05-05",
+                "title":"More Design Patterns",
+                "topic":"Other types of design patterns",
+                "link":"Other types of design patterns",
+                "criteria":"s",
+                "time":"3:00pm-4:20pm"
+            },
+            {
+                "type":"Recitation",
+                "date":"2017-05-03",
+                "title":"Multithreading",
+                "topic":"Threads and Tasks in Java",
+                "link":"Threads and Tasks in Java",
+                "criteria":"none",
+                "time":"3:30pm-4:23pm"
+            },
+            {
+                "type":"Homework Due",
+                "date":"2017-05-08",
+                "title":"Homework 6 Due",
+                "topic":"Homework 6 due",
+                "link":"Homework 6 due",
+                "criteria":"a",
+                "time":"12:00am-12:01am"
+            },
+            {
+                "type":"Exam",
+                "date":"2017-05-10",
+                "title":"Final Exam",
+                "topic":"Final Exam",
+                "link":"Final Exam",
+                "criteria":"asd",
+                "time":"2:15pm-5:00pm"
+            }
+        ]
+    },
+    "PDE":{
+        "teams":[
+            {
+                "name":"C4 Comics",
+                "color":"0x994d66ff",
+                "text_color":"0xffb380ff",
+                "link":"google.com"
+            },
+            {
+                "name":"Comic Sans",
+                "color":"0xffcc80ff",
+                "text_color":"0x003300ff",
+                "link":"google.com"
+            },
+            {
+                "name":"Instant Doodles",
+                "color":"0xe6b3ccff",
+                "text_color":"0x4d3399ff",
+                "link":"google.com"
+            }
+        ],
+        "students":[
+            {
+                "first_name":"Ryan",
+                "last_name":"Johnson",
+                "team":"C4 Comics",
+                "role":"Lead Programmer"
+            },
+            {
+                "first_name":"Dylan",
+                "last_name":"Johnson",
+                "team":"C4 Comics",
+                "role":"Lead Designer"
+            },
+            {
+                "first_name":"Arturo",
+                "last_name":"Snell",
+                "team":"Comic Sans",
+                "role":"Lead Progammer"
+            },
+            {
+                "first_name":"Arielle",
+                "last_name":"Smith",
+                "team":"Comic Sans",
+                "role":"Lead Designer"
+            },
+            {
+                "first_name":"Marianne",
+                "last_name":"Thornberry",
+                "team":"Instant Doodles",
+                "role":"Lead Programmer"
+            },
+            {
+                "first_name":"Mandy",
+                "last_name":"Cole",
+                "team":"Instant Doodles",
+                "role":"Lead Designer"
+            }
+        ]
+    }
+}

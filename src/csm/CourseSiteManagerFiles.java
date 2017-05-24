@@ -2,6 +2,7 @@ package csm;
 
 import csm.cdm.data.CDMData;
 import csm.cdm.data.TemplateDirectoryFile;
+import csm.exceptions.InvalidDateException;
 import csm.pde.data.PDEData;
 import csm.pde.data.Student;
 import csm.pde.data.Team;
@@ -22,6 +23,7 @@ import javax.json.*;
 import javax.json.stream.JsonGenerator;
 import java.io.*;
 import java.nio.channels.FileChannel;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -478,7 +480,12 @@ public class CourseSiteManagerFiles implements AppFileComponent {
             String type = scheduleItem.getString(TYPE);
             String title = scheduleItem.getString(TITLE);
             String topic = scheduleItem.getString(TOPIC);
-            DateHybrid date = DateHybrid.parse(scheduleItem.getString(DATE));
+            DateHybrid date = null;
+            try {
+                date = DateHybrid.parse(scheduleItem.getString(DATE));
+            } catch (InvalidDateException e) {
+                date = new DateHybrid(LocalDate.MIN);
+            }
             String criteria = scheduleItem.getString(CRITERIA);
             String link = scheduleItem.getString(LINK);
             String time = scheduleItem.getString(TIME);

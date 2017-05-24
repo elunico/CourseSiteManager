@@ -250,8 +250,7 @@ public class TAMController {
 
         if (!app.testing) {
             app.getGUI().getTps()
-               .addTransaction(
-                 chooseEndTimeAction);
+               .addTransaction(chooseEndTimeAction);
         } else {
             chooseEndTimeAction.doTransaction();
         }
@@ -456,6 +455,7 @@ public class TAMController {
                                         break;
                                     case 2:
                                         item.setTa2(lta);
+                                        break;
                                 }
                             }
                         });
@@ -662,8 +662,7 @@ public class TAMController {
 
         if (!app.testing) {
             app.getGUI().getTps()
-               .addTransaction(
-                 chooseStartTimeAction);
+               .addTransaction(chooseStartTimeAction);
         } else {
             chooseStartTimeAction.doTransaction();
         }
@@ -743,7 +742,6 @@ public class TAMController {
     }
 
     private boolean isValidEmail(String email) {
-        return email.matches(
-          "[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})");
+        return email.matches("[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})");
     }
 }
