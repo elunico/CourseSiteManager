@@ -15,9 +15,6 @@ public class ScheduleItem {
     SimpleObjectProperty<DateHybrid> date;
     SimpleStringProperty criteria;
 
-    public ScheduleItem clone() {
-        return new ScheduleItem(type.getValue(), title.getValue(), topic.getValue(), date.get(), time.get(), link.get(), criteria.get());
-    }
 
     public ScheduleItem(String type, String title, String topic, DateHybrid date) {
         this(type, title, topic, date, "");

@@ -98,8 +98,13 @@ public class TAMWorkspace extends AppWorkspaceComponent {
         );
         undergradColumn = new TableColumn(undergradTAColumnText);
         undergradColumn.setEditable(true);
-        undergradColumn.setCellFactory(
-          c -> new CheckBoxTableCell<TeachingAssistant, Boolean>());
+
+        undergradColumn.setCellFactory(c -> {
+            CheckBoxTableCell<TeachingAssistant, Boolean> t = new CheckBoxTableCell<>();
+            t.setOnMouseClicked(e -> app.getGUI().getFileController().markAsEdited(app.getGUI()));
+            return t;
+        });
+
         undergradColumn.setCellValueFactory(
           new PropertyValueFactory<TeachingAssistant, Boolean>("undergraduate")
         );

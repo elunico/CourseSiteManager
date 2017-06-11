@@ -4,33 +4,32 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 
 /**
  * This class represents a Teaching Assistant for the table of TAs.
  *
  * @author Richard McKenna
  */
-public class TeachingAssistant<E extends Comparable<E>>
-  implements Comparable<E>
-{
+public class TeachingAssistant implements Comparable<TeachingAssistant> {
     // THE TABLE WILL STORE TA NAMES AND EMAILS
     private final StringProperty name;
     private final StringProperty email; // not used in compareTo
     private final BooleanProperty undergraduate;
-    private final BooleanProperty inRecitation = new SimpleBooleanProperty(false);
+    private final BooleanProperty inRecitation;
 
-    public boolean isInRecitation() {
-        return inRecitation.get();
+    private TeachingAssistant(String name, String email, boolean undergrad, boolean inRecitation) {
+        this(new SimpleStringProperty(name), new SimpleStringProperty(email), new SimpleBooleanProperty(undergrad), new SimpleBooleanProperty(inRecitation));
+
     }
 
-    public BooleanProperty inRecitationProperty() {
-        return inRecitation;
-    }
+    private TeachingAssistant(StringProperty nameProperty, StringProperty emailProperty, BooleanProperty undergradProperty, BooleanProperty inRecitationProperty) {
+        name = nameProperty;
+        email = emailProperty;
+        undergraduate = undergradProperty;
+        inRecitation = inRecitationProperty;
+        inRecitation.addListener((observable, oldValue, newValue) -> {
 
-    public void setInRecitation(boolean inRecitation) {
-        this.inRecitation.set(inRecitation);
+        });
     }
 
     public TeachingAssistant(String initName, String initEmail) {
@@ -40,26 +39,36 @@ public class TeachingAssistant<E extends Comparable<E>>
     /**
      * Constructor initializes the TA name
      */
-    public TeachingAssistant(String initName, String initEmail,
-      boolean undergrad)
+    public TeachingAssistant(String initName, String initEmail, boolean undergrad)
     {
-        name = new SimpleStringProperty(initName);
-        email = new SimpleStringProperty(initEmail);
-        undergraduate = new SimpleBooleanProperty(undergrad);
+        this(new SimpleStringProperty(initName), new SimpleStringProperty(initEmail), new SimpleBooleanProperty(undergrad), new SimpleBooleanProperty(false));
+    }
 
-        inRecitation.addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+    public BooleanProperty inRecitationProperty() {
+        return inRecitation;
+    }
 
-            }
-        });
+    public TeachingAssistant deepCopy() {
+        return new TeachingAssistant(getName(), getEmail(), isUndergraduate(), isInRecitation());
+    }
+
+    public boolean isInRecitation() {
+        return inRecitation.get();
+    }
+
+    public void setInRecitation(boolean inRecitation) {
+        this.inRecitation.set(inRecitation);
+    }
+
+    public TeachingAssistant copy() {
+        return new TeachingAssistant(name, email, undergraduate, inRecitation);
     }
 
     // ACCESSORS AND MUTATORS FOR THE PROPERTIES
 
     @Override
-    public int compareTo(E otherTA) {
-        return getName().compareTo(((TeachingAssistant) otherTA).getName());
+    public int compareTo(TeachingAssistant otherTA) {
+        return getName().compareTo(otherTA.getName());
     }
 
     public String getName() {

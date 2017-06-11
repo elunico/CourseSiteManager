@@ -69,7 +69,7 @@ public class DateHybridTest {
     @org.junit.Test
     public void toEpochSeconds() throws Exception {
         DateHybrid h1 = new DateHybrid(24, 5, 2017);
-        DateHybrid h2 = new DateHybrid(24, 5, 2017, 12, 00, 00);
+        DateHybrid h2 = new DateHybrid(24, 5, 2017, 12, 0, 0);
         DateHybrid h3 = new DateHybrid(LocalDate.now());
         DateHybrid h4 = new DateHybrid(System.currentTimeMillis());
 
@@ -143,8 +143,8 @@ public class DateHybridTest {
 
         assertEquals(24, h1.getDate());
         assertEquals(24, h2.getDate());
-        assertEquals(24, h3.getDate());
-        assertEquals(24, h4.getDate());
+//        assertEquals(24, h3.getDate());
+//        assertEquals(24, h4.getDate());
         assertEquals(20, h5.getDate());
         assertEquals(19, h6.getDate());
         assertEquals(29, h7.getDate());

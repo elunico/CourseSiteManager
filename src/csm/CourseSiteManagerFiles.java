@@ -503,11 +503,8 @@ public class CourseSiteManagerFiles implements AppFileComponent {
     {
 
         // formatter: off
-        if (((CourseSiteManagerData) appDataComponent).getCdmData()
-                                                      .getTemplateDir() == null
-            || ((CourseSiteManagerData) appDataComponent).getCdmData()
-                                                         .getExportDir() ==
-               null)
+        if (((CourseSiteManagerData) appDataComponent).getCdmData().getTemplateDir() == null
+            || ((CourseSiteManagerData) appDataComponent).getCdmData().getExportDir() == null)
         {
             AppMessageDialogSingleton.getSingleton()
                                      .show(CourseSiteManagerProp.SITE_TEMPLATE_MISSING_ALERT,
