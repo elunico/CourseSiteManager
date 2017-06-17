@@ -9,8 +9,8 @@ import javafx.beans.property.SimpleStringProperty;
  *         In Homework4
  */
 public class Student {
-    SimpleStringProperty firstName, lastName, role;
-    SimpleObjectProperty<Team> team;
+    final SimpleStringProperty firstName, lastName, role;
+    final SimpleObjectProperty<Team> team;
 
     public Student() {
         this("", "", "");

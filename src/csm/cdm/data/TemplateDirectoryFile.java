@@ -15,8 +15,8 @@ import java.io.File;
  *         and constructed as a class so it can be managed in the table
  */
 public class TemplateDirectoryFile {
-    private SimpleStringProperty name, script, title;
-    private SimpleBooleanProperty used;
+    private final SimpleStringProperty name, script, title;
+    private final SimpleBooleanProperty used;
     private File file;
 
     public TemplateDirectoryFile(String name, String script, String title,

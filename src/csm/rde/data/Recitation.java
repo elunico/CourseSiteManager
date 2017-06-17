@@ -12,11 +12,11 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
  */
 public class Recitation implements Comparable<Recitation> {
 
-    private SimpleStringProperty section;
-    private SimpleStringProperty instructor;
-    private SimpleStringProperty location;
-    private SimpleStringProperty dayTime;
-    private SimpleObjectProperty<TeachingAssistant> ta1, ta2;
+    private final SimpleStringProperty section;
+    private final SimpleStringProperty instructor;
+    private final SimpleStringProperty location;
+    private final SimpleStringProperty dayTime;
+    private final SimpleObjectProperty<TeachingAssistant> ta1, ta2;
 
     public Recitation(String section, String instructor, String location, TeachingAssistant ta1, TeachingAssistant ta2, String dayTime) {
         this.section = new SimpleStringProperty(section);

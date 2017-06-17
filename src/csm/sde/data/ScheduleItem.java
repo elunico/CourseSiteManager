@@ -3,17 +3,18 @@ package csm.sde.data;
 import csm.DateHybrid;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Thomas Povinelli
  *         Created 4/13/17
  *         In Homework4
  */
-public class ScheduleItem {
-    SimpleStringProperty type, title, topic, link;
-    SimpleStringProperty time;
-    SimpleObjectProperty<DateHybrid> date;
-    SimpleStringProperty criteria;
+public class ScheduleItem implements Comparable<ScheduleItem>{
+    private final SimpleStringProperty type, title, topic, link;
+    private final SimpleStringProperty time;
+    private final SimpleObjectProperty<DateHybrid> date;
+    private final SimpleStringProperty criteria;
 
 
     public ScheduleItem(String type, String title, String topic, DateHybrid date) {
@@ -36,6 +37,7 @@ public class ScheduleItem {
     }
 
     public ScheduleItem() {
+        this("", "", "", DateHybrid.now());
     }
 
     public String getType() {
@@ -133,5 +135,10 @@ public class ScheduleItem {
 
     public SimpleStringProperty criteriaProperty() {
         return criteria;
+    }
+
+    @Override
+    public int compareTo(@NotNull ScheduleItem o) {
+        return this.date.get().compareTo(o.date.get());
     }
 }

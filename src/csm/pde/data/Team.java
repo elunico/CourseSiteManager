@@ -10,8 +10,8 @@ import javafx.collections.ObservableList;
  *         In Homework4
  */
 public class Team {
-    SimpleStringProperty name, color, textColor, link;
-    ObservableList<Student> members;
+    private final SimpleStringProperty name, color, textColor, link;
+    private ObservableList<Student> members;
 
     public Team(String name, String color, String textColor, String link, Student... members) {
         this(name, color, textColor, link, FXCollections.observableArrayList(members));

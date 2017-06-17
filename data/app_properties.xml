@@ -273,7 +273,7 @@
         <property name="TA_GRID_INVALID_START_END_TIME_MESSAGE"
                   value="You must choose a start time prior to the chosen end time in the office hours grid"></property>
 
-        <property name="CDM_TITLE_COLUMN" value="Nav Bar Title"></property>
+        <property name="CDM_TITLE_COLUMN" value="Nav Bar Title"/>
         <property name="CDM_USE_COLUMN" value="Use"></property>
         <property name="CDM_NAME_COLUMN" value="Name"></property>
         <property name="CDM_SCRIPT_COLUMN" value="Script Name"></property>

@@ -1,7 +1,9 @@
 package csm;
 
 import csm.exceptions.InvalidDateException;
+import org.jetbrains.annotations.NotNull;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -17,10 +19,15 @@ import static java.lang.Integer.parseInt;
  *         Created 5/2/17
  *         In Homework6
  */
-public class DateHybrid {
+public class DateHybrid
+  implements Comparable<DateHybrid>, Serializable, Cloneable
+{
 
     public static final DateHybrid WEEKEND;
-    private static final String INVALID_DATE_EXCEPTION = "Date components Date: %d, Month: %d, Year: %d, Hour: %d, Minute: %d, Second: %d are not valid";
+    private static final String
+      INVALID_DATE_EXCEPTION = "Date components Date: %d, Month: %d, " +
+                               "Year: %d, Hour: %d, Minute: %d, Second: %d " +
+                               "are not valid";
 
     static {
         DateHybrid WEEKEND1;
@@ -37,9 +44,7 @@ public class DateHybrid {
     private LocalDate localDate;
     private LocalDateTime localDateTime;
     private int day, month, year, hour, minute, second;
-
     private long epochMillis;
-
 
     public DateHybrid(LocalDate date) {
         localDate = date;
@@ -162,6 +167,23 @@ public class DateHybrid {
         return new DateHybrid(parseInt(comps[2]), parseInt(comps[1]), parseInt(comps[0]));
     }
 
+    public DateHybrid deepCopy() {
+        return new DateHybrid(epochMillis);
+    }
+
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            // ignore
+        }
+        return null;
+    }
+
+    public String toString() {
+        return localDate.toString();
+    }
+
     public boolean isWeekend() {
         GregorianCalendar cal = new GregorianCalendar(TimeZone.getDefault());
         cal.clear();
@@ -214,7 +236,18 @@ public class DateHybrid {
         return date;
     }
 
-    public String toString() {
-        return localDate.toString();
+    @Override
+    public int compareTo(@NotNull DateHybrid o) {
+        if (epochMillis < o.epochMillis) {
+            return -1;
+        } else if (epochMillis > o.epochMillis) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    public static DateHybrid now() {
+        return new DateHybrid(System.currentTimeMillis());
     }
 }

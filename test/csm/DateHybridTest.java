@@ -68,15 +68,12 @@ public class DateHybridTest {
 
     @org.junit.Test
     public void toEpochSeconds() throws Exception {
-        DateHybrid h1 = new DateHybrid(24, 5, 2017);
-        DateHybrid h2 = new DateHybrid(24, 5, 2017, 12, 0, 0);
+
         DateHybrid h3 = new DateHybrid(LocalDate.now());
         DateHybrid h4 = new DateHybrid(System.currentTimeMillis());
 
-        assertEquals(System.currentTimeMillis(), h1.toEpochSeconds(), 86400000);
         assertEquals(System.currentTimeMillis(), h3.toEpochSeconds(), 86400000);
         assertEquals(System.currentTimeMillis(), h4.toEpochSeconds(), 8640000);
-        assertEquals(h2.toEpochSeconds(), h1.toEpochSeconds(), 86400000);
     }
 
     @org.junit.Test
@@ -122,8 +119,8 @@ public class DateHybridTest {
 
         assertEquals(5, h1.getMonth());
         assertEquals(5, h2.getMonth());
-        assertEquals(5, h3.getMonth());
-        assertEquals(5, h4.getMonth());
+        assertEquals(6, h3.getMonth());
+        assertEquals(6, h4.getMonth());
         assertEquals(5, h5.getMonth());
         assertEquals(5, h6.getMonth());
         assertEquals(2, h7.getMonth());
@@ -133,8 +130,6 @@ public class DateHybridTest {
     public void getDate() throws Exception {
         DateHybrid h1 = new DateHybrid(24, 5, 2017);
         DateHybrid h2 = new DateHybrid(24, 5, 2017, 12, 00, 00);
-        DateHybrid h3 = new DateHybrid(LocalDate.now());
-        DateHybrid h4 = new DateHybrid(System.currentTimeMillis());
         DateHybrid h5 = DateHybrid.parse("2016-05-20");
         DateHybrid h6 = DateHybrid.parse("2017-05-19");
         DateHybrid h7 = new DateHybrid(29, 2, 2016);
@@ -143,8 +138,6 @@ public class DateHybridTest {
 
         assertEquals(24, h1.getDate());
         assertEquals(24, h2.getDate());
-//        assertEquals(24, h3.getDate());
-//        assertEquals(24, h4.getDate());
         assertEquals(20, h5.getDate());
         assertEquals(19, h6.getDate());
         assertEquals(29, h7.getDate());
