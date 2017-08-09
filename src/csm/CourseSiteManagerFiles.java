@@ -114,8 +114,12 @@ public class CourseSiteManagerFiles implements AppFileComponent {
             destinationChannel.transferFrom(sourceChannel, 0,
               sourceChannel.size());
         } finally {
-            sourceChannel.close();
-            destinationChannel.close();
+            if (sourceChannel != null) {
+                sourceChannel.close();
+            }
+            if (destinationChannel != null) {
+                destinationChannel.close();
+            }
         }
     }
 
