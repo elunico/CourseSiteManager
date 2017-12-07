@@ -659,7 +659,7 @@ public class CourseSiteManagerFiles implements AppFileComponent {
         for (ScheduleItem item : sdeData.getScheduleItems()) {
             JsonObject o = Json.createObjectBuilder()
                                .add("month", item.getDate().getMonth())
-                               .add("day", item.getDate().getDate())
+                               .add("day", item.getDate().getDayOfMonth())
                                .add("title", item.getTitle())
                                .add("link", item.getLink())
                                .add("topic", item.getTopic())

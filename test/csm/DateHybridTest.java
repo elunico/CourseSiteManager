@@ -1,6 +1,10 @@
 package csm;
 
+import org.junit.Test;
+
+import java.time.Instant;
 import java.time.LocalDate;
+import java.util.Date;
 
 import static org.junit.Assert.*;
 
@@ -20,8 +24,8 @@ public class DateHybridTest {
         DateHybrid h2 = DateHybrid.parse(t);
         DateHybrid h3 = DateHybrid.parse(p);
 
-        assertEquals(1, h1.getDate());
-        assertEquals(24, h2.getDate());
+        assertEquals(1, h1.getDayOfMonth());
+        assertEquals(24, h2.getDayOfMonth());
         assertEquals(2017, h2.getYear());
         assertEquals(2019, h1.getYear());
         assertEquals(5, h2.getMonth());
@@ -29,7 +33,7 @@ public class DateHybridTest {
 
         assertEquals(2016, h3.getYear());
         assertEquals(2, h3.getMonth());
-        assertEquals(29, h3.getDate());
+        assertEquals(29, h3.getDayOfMonth());
 
     }
 
@@ -72,8 +76,8 @@ public class DateHybridTest {
         DateHybrid h3 = new DateHybrid(LocalDate.now());
         DateHybrid h4 = new DateHybrid(System.currentTimeMillis());
 
-        assertEquals(System.currentTimeMillis(), h3.toEpochSeconds(), 86400000);
-        assertEquals(System.currentTimeMillis(), h4.toEpochSeconds(), 8640000);
+        assertEquals(System.currentTimeMillis(), h3.toEpochMillis(), 86400000);
+        assertEquals(System.currentTimeMillis(), h4.toEpochMillis(), 8640000);
     }
 
     @org.junit.Test
@@ -87,21 +91,21 @@ public class DateHybridTest {
     @org.junit.Test(expected = csm.exceptions.InvalidDateException.class)
     public void invalidDate() throws Exception {
         DateHybrid h8 = new DateHybrid(29, 2, 2017);
-        assertEquals(29, h8.getDate());
+        assertEquals(29, h8.getDayOfMonth());
         assertEquals(2, h8.getMonth());
         assertEquals(2017, h8.getYear());
 
         DateHybrid h = new DateHybrid(1, 3, 2017);
-        assertEquals(h8.toEpochSeconds(), h.toEpochSeconds());
+        assertEquals(h8.toEpochMillis(), h.toEpochMillis());
 
     }
 
     @org.junit.Test(expected = java.time.DateTimeException.class)
     public void testLocaleDateConstructor() throws Exception {
-        DateHybrid h1 = new DateHybrid(LocalDate.of(2017, 2, 29));
         DateHybrid h2 = new DateHybrid(LocalDate.of(2017, 3, 1));
+        DateHybrid h1 = new DateHybrid(LocalDate.of(2017, 2, 29));
 
-        assertEquals(h1.toEpochSeconds(), h2.toEpochSeconds());
+        assertEquals(h1.toEpochMillis(), h2.toEpochMillis());
 
     }
 
@@ -119,8 +123,8 @@ public class DateHybridTest {
 
         assertEquals(5, h1.getMonth());
         assertEquals(5, h2.getMonth());
-        assertEquals(6, h3.getMonth());
-        assertEquals(6, h4.getMonth());
+        assertEquals(12, h3.getMonth());
+        assertEquals(12, h4.getMonth());
         assertEquals(5, h5.getMonth());
         assertEquals(5, h6.getMonth());
         assertEquals(2, h7.getMonth());
@@ -136,11 +140,11 @@ public class DateHybridTest {
 
 
 
-        assertEquals(24, h1.getDate());
-        assertEquals(24, h2.getDate());
-        assertEquals(20, h5.getDate());
-        assertEquals(19, h6.getDate());
-        assertEquals(29, h7.getDate());
+        assertEquals(24, h1.getDayOfMonth());
+        assertEquals(24, h2.getDayOfMonth());
+        assertEquals(20, h5.getDayOfMonth());
+        assertEquals(19, h6.getDayOfMonth());
+        assertEquals(29, h7.getDayOfMonth());
     }
 
     @org.junit.Test
@@ -166,8 +170,29 @@ public class DateHybridTest {
 
     @org.junit.Test
     public void asDate() throws Exception {
+        long time = System.currentTimeMillis();
+        Date d = new Date(time);
+        DateHybrid h = new DateHybrid(time);
+        assertEquals(h.toDate().getTime(), time);
+        assertEquals(d, h.toDate());
     }
 
+    public static void assertIdentical(Object i, Object o) {
+        assertSame(i, o);
+    }
+
+    @Test
+    public void dateConstructor() throws Exception {
+        long millis = System.currentTimeMillis();
+        Instant now = Instant.now();
+        DateHybrid d2 = new DateHybrid(new Date(117, 0, 1));
+        System.out.println(new Date(117, 0, 1, 0, 0, 0).getTime());
+        DateHybrid d3 = new DateHybrid(1, 1, 2017);
+        System.out.println(d3.toEpochMillis());
+
+        assertEquals(d2, d3);
+
+    }
 
 
 
