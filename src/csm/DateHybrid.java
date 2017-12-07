@@ -16,32 +16,32 @@ import static java.lang.Integer.parseInt;
 
 /**
  * @author Thomas Povinelli
- *         Created 5/2/17
- *         In Homework6
+ * Created 5/2/17
+ * In Homework6
  */
 
 /**
  * DateHybrid is a class meant to make it easy to transfer between {@link java.time.LocalDate}
  * {@link java.time.LocalDateTime}, {@link java.util.Date} objects and month, dayOfMonth,
  * year, hour, minute, and second integers.
- *
+ * <p>
  * These objects can be constructed from any one of these date forms.
  * Note that time zones are handled by {@link ZoneId#systemDefault()} in all cases except
  * in the case of the constructor {@link DateHybrid(int, int, int)}
  * and @{link DateHybrid(int, int, int, int, int, int)} where {@link TimeZone#getDefault()}
  * is used by necessity since {@link LocalDate} can accept {@link ZoneId} but
  * {@link GregorianCalendar} cannot
- *
+ * <p>
  * Note also that month is 1-12, where January = 1, February = 2, ... December = 12.
  * Please note that {@link java.time.Month#APRIL} for
  * instance is 3 but in {@link DateHybrid} April is represented as 4. Note also that
  * for January 1, {@link LocalDate} would say month == 0 but in {@link DateHybrid}
  * month == 1
- *
+ * <p>
  * year is the normal year (i.e 2013) and
  * {@link #getDayOfMonth()} returns a number 1-31 based on the dayOfMonth of the month while
  * {@link #toDate()} returns a {@link java.util.Date} object
- *
+ * <p>
  * When the object is constructed with time, then time is considered in equality
  * When the object is not constructed with time (that is LocalDateTime, epochMillis, or min, hour, second)
  * then time is not considered in the equality
@@ -51,10 +51,9 @@ public class DateHybrid
 {
 
     public static final DateHybrid WEEKEND;
-    private static final String
-      INVALID_DATE_EXCEPTION = "Date components Date: %d, Month: %d, " +
-                               "Year: %d, Hour: %d, Minute: %d, Second: %d " +
-                               "are not valid";
+    private static final String INVALID_DATE_EXCEPTION =
+      "Date components Date: %d, Month: %d, " +
+      "Year: %d, Hour: %d, Minute: %d, Second: %d " + "are not valid";
 
     static {
         DateHybrid WEEKEND1;
@@ -97,7 +96,8 @@ public class DateHybrid
     }
 
     private void initNumberConstantsFromMillis(long millis) {
-        GregorianCalendar cal = new GregorianCalendar(TimeZone.getTimeZone(ZoneId.systemDefault()));
+        GregorianCalendar cal = new GregorianCalendar(
+          TimeZone.getTimeZone(ZoneId.systemDefault()));
         cal.clear();
         cal.setTimeInMillis(millis);
         this.month = cal.get(GregorianCalendar.MONTH) + 1;
@@ -115,14 +115,12 @@ public class DateHybrid
     public DateHybrid(long epochMillis) {
         timeSpecific = true;
         this.epochMillis = epochMillis;
-        this.localDate =
-          Instant.ofEpochMilli(epochMillis)
-                 .atZone(ZoneId.systemDefault())
-                 .toLocalDate();
-        this.localDateTime =
-          Instant.ofEpochMilli(epochMillis)
-                 .atZone(ZoneId.systemDefault())
-                 .toLocalDateTime();
+        this.localDate = Instant.ofEpochMilli(epochMillis)
+                                .atZone(ZoneId.systemDefault())
+                                .toLocalDate();
+        this.localDateTime = Instant.ofEpochMilli(epochMillis)
+                                    .atZone(ZoneId.systemDefault())
+                                    .toLocalDateTime();
         initNumberConstantsFromMillis(epochMillis);
         initDate(epochMillis);
 
@@ -135,12 +133,16 @@ public class DateHybrid
         timeSpecific = false;
     }
 
-    public DateHybrid(int dayOfMonth, int month, int year, int hour, int minute, int second)
-      throws InvalidDateException
+    public DateHybrid(int dayOfMonth, int month, int year, int hour, int minute,
+                      int second) throws InvalidDateException
     {
-        if (invalidDayOfMonth(dayOfMonth, month, year) || month > 12 | month < 1) {
-            throw new InvalidDateException(String.format(INVALID_DATE_EXCEPTION,
-              dayOfMonth, month, year, hour, minute, second));
+        if (invalidDayOfMonth(dayOfMonth, month, year) ||
+            month > 12 | month < 1)
+        {
+            throw new InvalidDateException(
+              String.format(INVALID_DATE_EXCEPTION, dayOfMonth, month, year,
+                            hour, minute, second
+                           ));
         }
 
         timeSpecific = true;
@@ -155,14 +157,12 @@ public class DateHybrid
         cal.clear();
         cal.set(year, month - 1, dayOfMonth + 1, hour, minute, second);
         this.epochMillis = cal.getTimeInMillis();
-        this.localDate =
-          Instant.ofEpochMilli(epochMillis)
-                 .atZone(ZoneId.systemDefault())
-                 .toLocalDate();
-        this.localDateTime =
-          Instant.ofEpochMilli(epochMillis)
-                 .atZone(ZoneId.systemDefault())
-                 .toLocalDateTime();
+        this.localDate = Instant.ofEpochMilli(epochMillis)
+                                .atZone(ZoneId.systemDefault())
+                                .toLocalDate();
+        this.localDateTime = Instant.ofEpochMilli(epochMillis)
+                                    .atZone(ZoneId.systemDefault())
+                                    .toLocalDateTime();
         initDate(epochMillis);
     }
 
@@ -204,7 +204,8 @@ public class DateHybrid
     {
         String[] comps = yyyy_mm_dd.split("[_-]");
         // LocalDate String is used to save and it has format YYYY-MM-dd as a string
-        return new DateHybrid(parseInt(comps[2]), parseInt(comps[1]), parseInt(comps[0]));
+        return new DateHybrid(
+          parseInt(comps[2]), parseInt(comps[1]), parseInt(comps[0]));
     }
 
     public DateHybrid(DateHybrid forCopy) {
@@ -225,13 +226,19 @@ public class DateHybrid
         return null;
     }
 
-    String getMonthName() {
-        String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    public String getMonthName() {
+        String[] months = {
+          "January", "February", "March", "April", "May", "June", "July",
+          "August", "September", "October", "November", "December"
+        };
         return months[getMonth() - 1];
     }
 
     public String toString() {
-       return String.format("DateHybrid(%s %d, %d: %02d:%02d:%02d)", getMonthName(), getDayOfMonth(), getYear(), getHour(), getMinute(), getSecond());
+        return String.format(
+          "DateHybrid(%s %d, %d: %02d:%02d:%02d)", getMonthName(),
+          getDayOfMonth(), getYear(), getHour(), getMinute(), getSecond()
+                            );
     }
 
     public boolean isWeekend() {
@@ -300,21 +307,23 @@ public class DateHybrid
 
     @Override
     public int compareTo(@NotNull DateHybrid o) {
-        if (epochMillis < o.epochMillis) {
-            return -1;
-        } else if (epochMillis > o.epochMillis) {
-            return 1;
+        if (timeSpecific) {
+            return Long.compare(epochMillis, o.epochMillis);
         } else {
-            return 0;
+            return localDate.compareTo(o.localDate);
         }
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == null) return false;
-        if (obj.getClass() != getClass()) return false;
+        if (obj == null) {
+            return false;
+        }
+        if (obj.getClass() != getClass()) {
+            return false;
+        }
 
-        DateHybrid that = (DateHybrid)obj;
+        DateHybrid that = (DateHybrid) obj;
 
         return (timeSpecific && that.epochMillis == this.epochMillis) ||
                (!timeSpecific && (localDate.equals(that.localDate)));
